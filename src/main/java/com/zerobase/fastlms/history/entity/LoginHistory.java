@@ -1,9 +1,6 @@
-package com.zerobase.fastlms.history;
+package com.zerobase.fastlms.history.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -14,11 +11,13 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Builder
 public class LoginHistory {
     @Id
-    private String userId;
+    private Long id;
 
+    private String userId;
     private LocalDateTime loginDt;
-    private String accessIP;
+    private String accessIp;
     private String userAgent;
 }

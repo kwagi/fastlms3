@@ -17,7 +17,7 @@ import java.io.PrintWriter;
 public class MainController {
 
     private final MailComponents mailComponents;
-    
+
     @RequestMapping("/")
     public String index() {
         
@@ -28,18 +28,16 @@ public class MainController {
         
         mailComponents.sendMail(email, subject, text);
         */
-        
+
         return "index";
     }
-    
-    
-    
+
+
     @RequestMapping("/error/denied")
     public String errorDenied() {
-        
+
         return "error/denied";
     }
-    
-    
-    
+
+
 }
